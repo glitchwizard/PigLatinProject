@@ -1,7 +1,14 @@
 //Business Logic
 var pigLatin = function(input) {
+  var vowels = ["a","e","i","o","u","A","E","I","O","U"]
   console.log("Hey this is the input: " + input);
-  return input;
+  var sentenceArray = input.split(" ")
+  var outputArray = [];
+  sentenceArray.forEach(function(x) {
+    console.log("For Each value:" + x)
+
+  });
+  return sentenceArray;
 };
 
 //jquery user interface
