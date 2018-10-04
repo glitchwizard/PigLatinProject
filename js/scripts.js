@@ -12,17 +12,21 @@ var pigLatin = function(input) {
                 if (vowelCountPlaceholder < 1) {
                   var intermediate = [];
                   intermediate = x.split('');
-                  intermediate.push(intermediate.splice(0, 1)[0]);
+                  for(var j = 0; j < x.indexOf(y); j++){
+                    intermediate.push(intermediate.splice(0, 1)[0]);
+                  }
                   intermediate.push("ay")
                   outputArray.push(intermediate.join(""));
                   vowelCountPlaceholder++;
                 }
             } else if (x.indexOf(y) === 0) {
+                  if (vowelCountPlaceholder < 1) {
                   var intermediate = [];
                   intermediate.push(x);
                   intermediate.push("way");
                   outputArray.push (intermediate.join(""));
                   vowelCountPlaceholder++;
+                }
               }
       });
       vowelCountPlaceholder =0;
